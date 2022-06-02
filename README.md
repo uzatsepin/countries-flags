@@ -9,3 +9,4 @@ In this project i used:
 - React-Router-dom
 - Axios
 - React Icons
+- React Select
