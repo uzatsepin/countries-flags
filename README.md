@@ -8,3 +8,4 @@ In this project i used:
 - Styled-components
 - React-Router-dom
 - Axios
+- React Icons
