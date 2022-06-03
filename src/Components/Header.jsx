@@ -35,12 +35,16 @@ const ModeSwitcher = styled.div`
 `;
 
 export const Header = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(localStorage.getItem('theme'));
 
   const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
 
   useEffect(() => {
     document.body.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   return (
