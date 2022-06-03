@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { ALL_COUNTRIES } from '../config';
@@ -26,15 +27,18 @@ export const HomePage = ({ countries, setCountries }) => {
     if (!countries.length) {
       axios.get(ALL_COUNTRIES).then(({ data }) => setCountries(data));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    handleSearch();
+  }, [countries]);
   return (
     <>
       <Controls onSearch={handleSearch} />
       <List>
         {filteredCountries.map((c) => {
           const countryInfo = {
-            img: c.flags.png,
+            img: c.flags.svg,
             name: c.name,
             info: [
               {
