@@ -8,3 +8,7 @@ In this project i used:
 - Styled-components
 - React-Router-dom
 - Axios
+- React Icons
+- React Select
+
+Link on firebase hosting – https://countries-flags-573ad.web.app/
